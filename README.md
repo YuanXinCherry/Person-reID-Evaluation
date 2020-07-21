@@ -1,2 +1,2 @@
 # Person-reID-Evaluation
-行人重识别指标
+行人重识别指标T-MAC
