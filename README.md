@@ -25,7 +25,7 @@ line_color = ['red', 'green', 'blue', 'tomato', 'sienna', 'darkorange', 'darkgol
                 'palegreen', 'lime', 'cyan', 'dodgerblue', 'indigo', 'magenta', 'deeppink', 'crimson', 'lightpink']
 line_width = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 ```
-According to the format and method name of ReID method in part 1. You need to modify the parameters of method_name, line_type and line_width.
+According to the format and name of ReID method in part 1. You need to modify the parameters of method_name, line_type and line_width.
 
 Next, you can run the shell:
 ```
