@@ -12,7 +12,9 @@ Check the Prerequisites. Then download T_MAC.py and test.py. Next put them in th
 Extract distance, gallery_label, gallery_cam, query_label, and query_cam for the different methods of ReID.
 
 Save the data format as follows:
+```
 mat:{'distance':distmat,'gallery_label':gallery_label,'gallery_cam':gallery_cam,'query_label':query_label,'query_cam':query_cam} # Save to Mat for testing
+```
 
 ## Part 2: Testing
 In test.py, you need to do the following simple operation:
