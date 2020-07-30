@@ -11,56 +11,61 @@ from sklearn.preprocessing import normalize
 from sklearn.preprocessing import MinMaxScaler
 
 
-def normsimilarity(similarity):
+def norm_distance(distance):
+
     min_max_scaler=MinMaxScaler()
-    X_train_minmax=min_max_scaler.fit_transform(similarity.T)
-    similarity = X_train_minmax.T
+    X_train_minmax=min_max_scaler.fit_transform(distance.T)
+    distance = X_train_minmax.T
      
-    return  similarity
-    
+    return  distance
+
+
 #######################################################################
 # Evaluate
-# simmat:similarity-mat;ql:query-labels;qc:query-cameras;gl:gallery-labels;gc:gallery-cameras;
-def evaluate(simmat, ql, qc, gl, gc, n_bin=100): 
+# dismat:distance-matrix;ql:query-labels;qc:query-cameras;gl:gallery-labels;gc:gallery-cameras;
+def evaluate(dismat, ql, qc, gl, gc, n_bin=100): 
     
-    score =  normsimilarity(simmat)
-    n_q, n_g = score.shape
+    distance = norm_distance(dismat)
+    n_q, n_g = distance.shape
+    
+    junk_index1 = np.argwhere(gl==-1)
+    distance[:,junk_index1] = 1
     gl = np.tile(gl,(n_q,1))
-    
     
     for q_junk_idx in range(n_q):
         q_index = np.argwhere(gl[q_junk_idx,:]==ql[q_junk_idx])
         c_index = np.argwhere(gc==qc[q_junk_idx])
         junk_index = np.intersect1d(q_index, c_index)
-        score[q_junk_idx][junk_index] = 0
-        gl[q_junk_idx][junk_index] = -1
+        distance[q_junk_idx, junk_index] = 1
+        gl[q_junk_idx, junk_index] = -1
         
-    score_idx = np.argsort(-score, axis=1)
+    distance_idx = np.argsort(distance, axis=1)
     matches = np.zeros((n_q, n_g))
     
-    for j in range(n_q):
-        score[j,:] = score[j,score_idx[j,:]]
-        gl[j,:] = gl[j, score_idx[j,:]]
-        matches[j,:] = (gl[j,:] == ql[j]).astype(np.int32)
-        
-    CmAP = np.zeros((n_bin)) 
-    cur_gt_count = np.zeros(n_bin) 
+    for i in range(n_q):
+        distance[i,:] = distance[i,score_idx[i,:]]
+        gl[i,:] = gl[i, distance_idx[i,:]]
+        matches[i,:] = (gl[i,:] == ql[i]).astype(np.int32)
     
-    threshold_bin = np.arange(1, 0, -1.0/n_bin)
+      
+    CmAP = np.zeros((n_bin + 1)) 
+    cur_gt_count = np.zeros(n_bin + 1) 
+    
+    threshold_bin = np.arange(0, 1 + 1.0/n_bin, 1.0/n_bin)
     threshold_bin = np.tile(threshold_bin, (n_g,1))
     threshold_bin = threshold_bin.T
     
     n_sample = np.arange(1,n_g+1,1)
-    n_sample = np.tile(n_sample,(n_bin,1))
+    n_sample = np.tile(n_sample,(n_bin + 1,1))
    
     # find good index for every query
     for q_idx in range(n_q):
         view_bar(q_idx, n_q)
         
-        q_score = np.tile(score[q_idx], (n_bin,1)) 
-        q_score = q_score - threshold_bin 
-        q_mask = np.where(q_score >= 0, 1, 0)
-        q_gt = np.tile(matches[q_idx], (n_bin,1))
+        q_distance = np.tile(distance[q_idx], (n_bin + 1,1)) 
+        q_distance = q_distance - threshold_bin 
+        q_mask = np.where(q_distance <= 0, 1, 0)
+        q_gt = np.tile(matches[q_idx], (n_bin + 1,1))
         q_gt_mask = q_mask*q_gt
         q_gt_mask_bk = np.copy(q_gt_mask)
         n_q_gt = q_gt_mask.sum(axis=1)
@@ -93,7 +98,7 @@ def view_bar(num, total):
 
 def draw(mAP_list, mmAP, method_name, line_type, line_color, line_width, N):
     num = len(method_name) 
-    x = np.arange(1.0/N, 1.0 + 1.0/N, 1.0/N)
+    x = np.arange(0.0, 1.0 + 1.0/N, 1.0/N)
     
     
     plt.figure(figsize=(16,6),dpi=98)
@@ -101,8 +106,9 @@ def draw(mAP_list, mmAP, method_name, line_type, line_color, line_width, N):
     p2 = plt.subplot(122)
     
     for i in range(num):
-        max_mAP_idx = np.argmax(mAP_list[i]) 
-        curve_label = ''.join(method_name[i]) + ' (mAP='+ '%.2f%%' % ( mAP_list[i][-1]* 100) +', λ='+ '%.2f' %(x[max_mAP_idx])+')'
+        reid_idx = np.argmax(mAP_list[i]) 
+        retr_idx = np.argwhere(mAP_list[i] == mAP_list[i][-1])
+        curve_label = ''.join(method_name[i]) + ' (mAP='+ '%.2f%%' % ( mAP_list[i][-1]* 100) +', λ1='+ '%.2f' %(x[reid_idx])+', λ2='+'%.2f' %(x[retr_idx[0]])+')'
         p1.plot(x, mAP_list[i], label = curve_label, linestyle = line_type[i], color = line_color[i], linewidth = line_width[i])
         p2.plot(x, mAP_list[i], label = curve_label, linestyle = line_type[i], color = line_color[i], linewidth = line_width[i])
 
@@ -135,3 +141,4 @@ def draw(mAP_list, mmAP, method_name, line_type, line_color, line_width, N):
     plt.savefig('T-MAC.jpg')
     plt.savefig('T-MAC.pdf')
     
+
