@@ -43,7 +43,7 @@ def evaluate(dismat, ql, qc, gl, gc, n_bin=100):
     matches = np.zeros((n_q, n_g))
     
     for i in range(n_q):
-        distance[i,:] = distance[i,score_idx[i,:]]
+        distance[i,:] = distance[i,distance_idx[i,:]]
         gl[i,:] = gl[i, distance_idx[i,:]]
         matches[i,:] = (gl[i,:] == ql[i]).astype(np.int32)
     
