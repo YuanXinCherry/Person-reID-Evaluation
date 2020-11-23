@@ -19,12 +19,10 @@ mat:{'distmat':distmat,'gallery_label':gallery_label,'gallery_cam':gallery_cam,'
 ## Part 2: Testing
 In test.py, you need to do the following simple operation:
 ```
-method_name = ['ResNet-50', 'DenseNet-121', 'PCB', 'ResNet50_fc512', 'MLFN', 'HA-CNN', 'MobileNetV2_x1_0', 'MobileNetV2_x1_4', 
-                'OSNet_x1_0', 'OSNet_x0_75', 'OSNet_x0_5', 'OSNet_x0_25', 'AlignedReID', 'BDB', 'BagTricks', 'AGW', 'ResNet50 + S-ReID',
-                'DG-Net',  'FastReID(ResNet50)', 'MGN']
-line_type = ['-', '--', '-.', '-', '--', '-.', '-', '--', '-.' ,'-', '--', '-.', '-', '--', '-.', '-', '--', '-.', '-', '--']
-line_color = ['red', 'green', 'blue', 'tomato', 'sienna', 'darkorange', 'darkgoldenrod', 'gold', 'olive', 'yellow', 'lawngreen', 
-                'palegreen', 'lime', 'cyan', 'dodgerblue', 'indigo', 'magenta', 'deeppink', 'crimson', 'lightpink']
+method_name = ['ResNet-50', 'DenseNet-121', 'MLFN', 'HA-CNN', 'MobileNetV2', 'OSNet', 'AlignedReID', 'DG-Net', 'BDB', 'BagTricks', 'FastReID', 'AGW']
+line_type = ['-', '--', '-.', '-', '--', '-.', '-', '--', '-.' ,'-', '--', '-.' ]
+line_color = ['red', 'green', 'blue', 'tomato', 'sienna', 'darkorange', 'darkgoldenrod', 'gold', 'olive', 'yellow', 'lawngreen', 'palegreen']
+line_width = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 line_width = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 ```
 According to the format and name of ReID method in part 1. You need to modify the parameters of method_name, line_type and line_width.
