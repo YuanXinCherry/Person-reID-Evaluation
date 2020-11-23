@@ -2,8 +2,8 @@
 
 ## Prerequisites
 - Python3.0+
-- Scipy
-- Numpy
+- Scipy=1.1.0
+- Numpy=1.15.1
 
 ## Getting started
 Check the Prerequisites. Then download GOM.py and test.py. Next put them in the same directory as you want.
