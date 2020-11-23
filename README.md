@@ -6,14 +6,14 @@
 - Numpy
 
 ## Getting started
-Check the Prerequisites. Then download T_MAC.py and test.py. Next put them in the same directory as you want.
+Check the Prerequisites. Then download GOM.py and test.py. Next put them in the same directory as you want.
 
 ## Part 1: Prepare data
 Extract distance, gallery_label, gallery_cam, query_label, and query_cam for the different methods of ReID.
 
 Save the data format as follows:
 ```
-mat:{'distance':distmat,'gallery_label':gallery_label,'gallery_cam':gallery_cam,'query_label':query_label,'query_cam':query_cam} # Save to Mat for testing
+mat:{'distmat':distmat,'gallery_label':gallery_label,'gallery_cam':gallery_cam,'query_label':query_label,'query_cam':query_cam} # Save to Mat for testing
 ```
 
 ## Part 2: Testing
@@ -34,4 +34,4 @@ Next, you can run the shell:
 python test.py
 ```
 
-Finally, you can get the curve of T-MAC.
+Finally, you can get the curve of mReP and mFR.
