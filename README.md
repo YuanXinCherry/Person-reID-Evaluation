@@ -31,4 +31,4 @@ Next, you can run the shell:
 python test.py
 ```
 
-Finally, you can get the curve of mReP and mFR.
+Finally, you can get rank-1, mAP, mVP, mReP, MREP, MFR and the curve of mReP and mFR.
