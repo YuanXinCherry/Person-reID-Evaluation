@@ -1,7 +1,7 @@
 # Re-identification = Retrieval + Verification: Back to Essence and Forward with a New Metric
 
 ## Prerequisites
-- Python
+- Python3.0+
 - Scipy
 - Numpy
 
