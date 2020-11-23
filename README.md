@@ -1,4 +1,4 @@
-# T-MAC: A New Evaluation Metric for Person Re-identification
+# Re-identification = Retrieval + Verification: Back to Essence and Forward with a New Metric
 
 ## Prerequisites
 - Python
