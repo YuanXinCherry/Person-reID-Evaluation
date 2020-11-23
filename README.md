@@ -23,7 +23,6 @@ method_name = ['ResNet-50', 'DenseNet-121', 'MLFN', 'HA-CNN', 'MobileNetV2', 'OS
 line_type = ['-', '--', '-.', '-', '--', '-.', '-', '--', '-.' ,'-', '--', '-.' ]
 line_color = ['red', 'green', 'blue', 'tomato', 'sienna', 'darkorange', 'darkgoldenrod', 'gold', 'olive', 'yellow', 'lawngreen', 'palegreen']
 line_width = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
-line_width = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 ```
 According to the format and name of ReID method in part 1. You need to modify the parameters of method_name, line_type and line_width.
 
