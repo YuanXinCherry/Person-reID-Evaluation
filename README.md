@@ -53,12 +53,12 @@ Finally, you can get rank-1, mAP, mVP, mReP, MREP, MFR and the curve of mReP and
 
 ## Citation
 If you find this code useful for your research, please cite our paper
-'''
+```
 @article{wang2020gom,
   title={Re-identification = Retrieval + Verification: Back to Essence and Forward with a New Metric},
   author={Wang, Zheng and Yuan, Xin and Yamasaki, Toshihiko and Lin, Yutian and Xu, Xin and Zeng, Wenjun},
   journal={arXiv preprint arXiv:2011.11506},
   year={2020}
 }
-'''
+```
 
