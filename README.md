@@ -23,20 +23,20 @@ mat:{'distmat':distmat,'gallery_label':gallery_label,'gallery_cam':gallery_cam,'
 ## Part 2: Testing
 In test.py, you need to do the following simple operation:
 ```
-Market1501 and DukeMTMC-reID
-Supervised methods
+# Market1501 and DukeMTMC-reID
+# Supervised methods
 method_name = ['ResNet-50', 'DenseNet-121', 'MLFN', 'HA-CNN', 'MobileNetV2', 'OSNet', 'AlignedReID', 'DG-Net', 'BDB', 'BagTricks', 'FastReID', 'AGW']
 line_type = ['-', '--', '-.', '-', '--', '-.', '-', '--', '-.' ,'-', '--', '-.' ]
 line_color = ['red', 'green', 'blue', 'tomato', 'sienna', 'darkorange', 'darkgoldenrod', 'gold', 'olive', 'yellow', 'lawngreen', 'palegreen']
 line_width = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 
-Unsupervised methods
+# Unsupervised methods
 method_name = ['PUL', 'ECN', 'UDA_TP', 'MMT', 'SpCL']
 line_type = ['-', '--', '-.', '-', '--']
 line_color = ['red', 'green', 'blue', 'tomato', 'sienna']
 line_width = [2, 2, 2, 2, 2]
 
-ViRi776
+# ViRi776
 method_name = ['ResNet-50', 'VOC-ReID', 'BagTricks']
 line_type = ['-', '--', '-.']
 line_color = ['red', 'green', 'blue']
