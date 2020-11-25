@@ -6,6 +6,9 @@ The *official* repository for [Re-identification = Retrieval + Verification: Bac
 
 **Illustration of existing retrieval and verification procedures.** 1) Closed-world retrieval: the method returns a ranking list to users and cannot tell which images are the true targets. The user needs to judge targets according to their experience and feeling. 2) Closed-world verification: given a decision boundary, images whose distances are below the boundary are considered as the targets. Nevertheless, the method cannot distinguish ground truth (GT) and non-GT within the boundary. 3) Open-set: the GT of the probe does not always exist in the gallery, thus re-ID procedure should include this kind of scenario.
 
+## Comparison with existing metrics
+![comparison](figs/Comparison.png)
+
 ## Prerequisites
 - Python3.0+
 - Scipy=1.1.0
