@@ -9,6 +9,9 @@ The *official* repository for [Re-identification = Retrieval + Verification: Bac
 ## Comparison with existing metrics
 ![comparison](figs/Comparison.png)
 
+## A family of metrics of GOM
+![metrics](figs/Metrics.png)
+
 ## Prerequisites
 - Python3.0+
 - Scipy=1.1.0
