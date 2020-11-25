@@ -10,7 +10,7 @@ The *official* repository for [Re-identification = Retrieval + Verification: Bac
 ![comparison](figs/Comparison.png)
 
 ## A family of metrics of GOM
-<img src="figs/Metrics.png" width="800" height="400" alt="metrics"/><br/>
+<img src="figs/Metrics.png" width="700" height="350" alt="metrics"/><br/>
 
 ## Prerequisites
 - Python3.0+
