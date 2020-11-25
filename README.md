@@ -62,7 +62,7 @@ Finally, you can get rank-1, mAP, mVP, mReP, MREP, MFR and the curve of mReP and
 ## Comparison with existing metrics using toy samples
 ![toy samples](figs/Toy_samples.png)
 
-**A simple re-ID example highlighting the main differences between evaluation metrics.** Six different ranking lists are shown. $$AP$$ and *FAR* overemphasize the task of retrieval and verification respectively. *GOM* balances both of these by being an explicit combination of a retrieval precision *RP* and a verification precision *VP*, contributed to re-ID precision *ReP*, and assess the false rate under the different threshold by *FR*.
+**A simple re-ID example highlighting the main differences between evaluation metrics.** Six different ranking lists are shown. *AP* and *FAR* overemphasize the task of retrieval and verification respectively. *GOM* balances both of these by being an explicit combination of a retrieval precision *RP* and a verification precision *VP*, contributed to re-ID precision *ReP*, and assess the false rate under the different threshold by *FR*.
 
 
 ## Citation
