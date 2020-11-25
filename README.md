@@ -10,6 +10,7 @@ The *official* repository for [Re-identification = Retrieval + Verification: Bac
 ![comparison](figs/Comparison.png)
 
 ## A family of metrics of GOM
+<img src="figs/Metrics.png" width="200" height="200" alt="metrics"/><br/>
 ![metrics](figs/Metrics.png)
 
 ## Prerequisites
