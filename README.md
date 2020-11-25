@@ -67,7 +67,7 @@ Finally, you can get rank-1, mAP, mVP, mReP, MREP, MFR and the curve of mReP and
 ## Experiment results
 ![curves](figs/Curves.png)
 ![person re-ID](figs/Person_re-ID.png)
-<img src="figs/Vehicle_re-ID.png" width="400" height="200" alt="vehicle re-ID"/><br/>
+<img src="figs/Vehicle_re-ID.png" width="400" height="300" alt="vehicle re-ID"/><br/>
 
 ## Citation
 If you find this code useful for your research, please cite our paper
