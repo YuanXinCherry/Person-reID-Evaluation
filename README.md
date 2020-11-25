@@ -3,6 +3,7 @@
 The *official* repository for [Re-identification = Retrieval + Verification: Back to Essence and Forward with a New Metric](https://arxiv.org/abs/2011.11506). GOM evaluates the state-of-the-art methods on both **supervised learning** tasks and **unsupervised learning** tasks for object re-ID, including person re-ID and vehicle re-ID.
 
 ![problem](figs/Problem.png)
+
 Illustration of existing retrieval and verification procedures. 1) Closed-world retrieval: the method returns a ranking list to users and cannot tell which images are the true targets. The user needs to judge targets according to their experience and feeling. 2) Closed-world verification:given a decision boundary, images whose distances are below the boundary are considered as the targets. Nevertheless, the method cannot distinguish ground truth (GT) and non-GT within the boundary. 3) Open-set: the GT of the probe does not always exist in the gallery, thus re-ID procedure should include this kind of scenario.
 
 ## Prerequisites
