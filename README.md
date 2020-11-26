@@ -69,7 +69,7 @@ The mat format of GOM results is as follows：
 ```
 GOM_result = {'CMC_list': CMC_list, 'mRP_list': mRP_list, 'mVP_list':mVP_list, 'mReP_list':mReP_list, 'mFR_list':mFR_list}
 ```
-The corresponding experimental results are as follows：
+Download the folder of GOM_results and the corresponding experimental results are as follows：
 ![curves](figs/Curves.png)
 ![person re-ID](figs/Person_re-ID.png)
 <img src="figs/Vehicle_re-ID.png" width="500" height="200" alt="vehicle re-ID"/><br/>
