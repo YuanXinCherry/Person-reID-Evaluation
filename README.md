@@ -65,6 +65,11 @@ Finally, you can get rank-1, mAP, mVP, mReP, MREP, MFR and the curve of mReP and
 **A simple re-ID example highlighting the main differences between evaluation metrics.** Six different ranking lists are shown. *AP* and *FAR* overemphasize the task of retrieval and verification respectively. *GOM* balances both of these by being an explicit combination of a retrieval precision *RP* and a verification precision *VP*, contributed to re-ID precision *ReP*, and assess the false rate under the different threshold by *FR*.
 
 ## Experiment results
+The mat format of GOM results is as follows：
+```
+GOM_result = {'CMC_list': CMC_list, 'mRP_list': mRP_list, 'mVP_list':mVP_list, 'mReP_list':mReP_list, 'mFR_list':mFR_list}
+```
+The corresponding experimental results are as follows：
 ![curves](figs/Curves.png)
 ![person re-ID](figs/Person_re-ID.png)
 <img src="figs/Vehicle_re-ID.png" width="500" height="200" alt="vehicle re-ID"/><br/>
