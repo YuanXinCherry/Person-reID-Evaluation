@@ -56,9 +56,10 @@ Next, you can run the shell:
 ```
 python test.py
 ```
+Finally, you can get rank-1, mAP, mVP, mReP, MREP, MFR and the curve of mReP and mFR.
+
 ## Additional Notes
 
-Finally, you can get rank-1, mAP, mVP, mReP, MREP, MFR and the curve of mReP and mFR.
 
 ## Comparison with existing metrics using toy samples
 ![toy samples](figs/Toy_samples.png)
