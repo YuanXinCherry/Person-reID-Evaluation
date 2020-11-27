@@ -61,6 +61,20 @@ python test.py
 Finally, you can get rank-1, mAP, mVP, mReP, MREP, MFR and the curve of mReP and mFR.
 
 ## Additional Notes
+If you want to test a single method, then only change the method_name to the following example.
+```
+method_name = ['ResNet-50']
+line_type = ['-']
+line_color = ['red']
+line_width = [2]
+```
+
+Then call the print_GOM() function to get the following evaluation metrics. See in test.py:
+```
+# print rank@1, mAP, mVP_{max}, mReP_{max}, MREP, MFR
+gom.print_GOM(method_name, CMC_list, mRP_list, mVP_list, mReP_list, mFR_list, N)
+```
+After that, you can get rank@1, mAP, mVP_{max}, mReP_{max}, MREP, MFR.
 
 
 ## Comparison with existing metrics using toy samples
