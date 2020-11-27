@@ -22,7 +22,9 @@ Check the Prerequisites. Then download GOM.py and test.py. Next put them in the 
 
 ## Part 1: Prepare data
 Extract distance, gallery_label, gallery_cam, query_label, and query_cam for the different methods of re-ID.
-**Attention：To facilitate the division of thresholds, distances must be normalized to the range of [0,1]**
+
+**Attention：To facilitate the division of thresholds, distances must be normalized to the range of [0, 1].**
+
 Save the data format as follows:
 ```
 mat:{'distmat':distmat,'gallery_label':gallery_label,'gallery_cam':gallery_cam,'query_label':query_label,'query_cam':query_cam} # Save to Mat for testing
