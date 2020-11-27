@@ -21,7 +21,7 @@ The *official* repository for [Re-identification = Retrieval + Verification: Bac
 Check the Prerequisites. Then download GOM.py and test.py. Next put them in the same directory as you want.
 
 ## Part 1: Prepare data
-Extract distance, gallery_label, gallery_cam, query_label, and query_cam for the different methods of ReID.
+Extract distance, gallery_label, gallery_cam, query_label, and query_cam for the different methods of re-ID.
 
 Save the data format as follows:
 ```
