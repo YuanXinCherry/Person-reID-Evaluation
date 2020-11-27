@@ -29,7 +29,7 @@ mat:{'distmat':distmat,'gallery_label':gallery_label,'gallery_cam':gallery_cam,'
 ```
 
 ## Part 2: Testing
-In test.py, you need to do the following simple operation:
+In test_all.py, you need to do the following simple operation:
 ```
 # Market1501 and DukeMTMC-reID
 # Supervised methods
@@ -54,7 +54,7 @@ According to the format and name of ReID method in part 1. You need to modify th
 
 Next, you can run the shell:
 ```
-python test.py
+python test_all.py
 ```
 
 Finally, you can get rank-1, mAP, mVP, mReP, MREP, MFR and the curve of mReP and mFR.
