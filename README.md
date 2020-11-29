@@ -1,4 +1,3 @@
-
 # Genuine Open-set re-ID Metric (GOM)
 The *official* repository for [Re-identification = Retrieval + Verification: Back to Essence and Forward with a New Metric](https://arxiv.org/abs/2011.11506). GOM evaluates the state-of-the-art methods on both **supervised learning** tasks and **unsupervised learning** tasks for object re-ID, including person re-ID and vehicle re-ID.
 
