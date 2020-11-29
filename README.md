@@ -86,7 +86,20 @@ The mat format of GOM results is as follows：
 ```
 GOM_result = {'CMC_list': CMC_list, 'mRP_list': mRP_list, 'mVP_list':mVP_list, 'mReP_list':mReP_list, 'mFR_list':mFR_list}
 ```
-Download the folder of GOM_results and the corresponding experimental results are as follows：
+Download the folder of GOM_results with all the experimental results on Market1501, DukeMTMC-reID and ViRi776 respectively.
+```
+# Market1501 and DukeMTMC-reID
+# Supervised methods
+method_name = ['ResNet-50', 'DenseNet-121', 'MLFN', 'HA-CNN', 'MobileNetV2', 'OSNet', 'AlignedReID', 'DG-Net', 'BDB', 'BagTricks', 'FastReID', 'AGW']
+
+# Unsupervised methods
+method_name = ['PUL', 'ECN', 'UDA_TP', 'MMT', 'SpCL']
+```
+```
+# ViRi776
+method_name = ['ResNet-50', 'VOC-ReID', 'BagTricks']
+```
+The corresponding experimental results of curves and values are as follows：
 ![curves](figs/Curves.png)
 ![person re-ID](figs/Person_re-ID.png)
 <img src="figs/Vehicle_re-ID.png" width="500" height="200" alt="vehicle re-ID"/><br/>
