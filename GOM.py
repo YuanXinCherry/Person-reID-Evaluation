@@ -334,4 +334,3 @@ print(mFR_list)
 # Save to  mat for check
 # result = {'mAP_list': mAP_list, 'mmAP':mmAP, 'mReP_list':mReP_list}
 # scipy.io.savemat('./mReP/mReP-AGW-market.mat', result)
-
