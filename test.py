@@ -5,7 +5,6 @@ import time
 import GOM as gom
 
 
-
 #CMC_list, mRP_list, mVP_list, mReP_list, mFR_list, method_name, line_type, line_color, line_width
 
 # The example of multiple methods 
